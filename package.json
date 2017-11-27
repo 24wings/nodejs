@@ -1,0 +1,43 @@
+{
+    "name": "koa-share",
+    "version": "0.1.1",
+    "requires": true,
+    "lockfileVersion": 1,
+    "scripts": {
+        "start": "nodemon dist/www.js &&tsc -w  ",
+        "apidoc": "apidoc  -i src/  -o public/apidoc/",
+        "jsdoc": "node_modules/.bin/jsdoc -c jsdoc.json"
+    },
+    "dependencies": {
+        "@types/koa": "^2.0.41",
+        "@types/koa-bodyparser": "^3.0.26",
+        "@types/koa-pug": "^3.0.3",
+        "@types/koa-router": "^7.0.25",
+        "@types/koa-static": "^3.0.2",
+        "@types/koa-views": "^2.0.3",
+        "@types/node": "^8.0.53",
+        "@types/pug": "^2.0.4",
+        "@types/reflect-metadata": "0.0.5",
+        "@types/request": "^2.0.8",
+        "gulp-nodemon": "^2.2.1",
+        "koa": "^2.4.1",
+        "koa-bodyparser": "^4.2.0",
+        "koa-pug": "^3.0.0-2",
+        "koa-router": "^7.3.0",
+        "koa-static": "^4.0.2",
+        "koa-views": "^6.1.2",
+        "marked": "^0.3.6",
+        "pug": "^2.0.0-rc.4",
+        "reflect-metadata": "^0.1.10",
+        "request": "^2.83.0",
+        "typescript": "^2.6.1",
+        "urlencode": "^1.1.0"
+    },
+    "devDependencies": {
+        "apidoc": "^0.17.6",
+        "docdash": "^0.4.0",
+        "gulp": "^3.9.1",
+        "gulp-markdown": "^1.2.0",
+        "gulp-typescript": "^3.2.3"
+    }
+}

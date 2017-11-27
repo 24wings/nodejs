@@ -1,0 +1,22 @@
+extends ../blank.pug
+block content 
+    button(onclick="testFaceMerge()") 选择一张图片
+    .row
+        .col-md-6   
+            img#loadImg.img-responsive
+        .col-md-6
+            img#viewImg.img-responsive
+    script(src="/js/common.js")
+    script.
+        function testFaceMerge(){
+            readImage(function(base64){
+                $('#loadImg').attr('src',base64);
+                $.ajax({url:'/qqai/detectFace',
+                    method:"POST",
+                    data:{image:base64,model:1},
+                    success:function(rtn){
+                       alert(JSON.stringify(rtn))
+                }});
+            
+            });
+        }
